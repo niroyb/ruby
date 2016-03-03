@@ -845,6 +845,7 @@ module Net   #:nodoc:
     #
     # When called with a block, it returns the return value of the
     # block; otherwise, it returns self.
+    # Raises IOError if the session has already been started.
     #
     def start  # :yield: http
       raise IOError, 'HTTP session already opened' if @started
